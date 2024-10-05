@@ -1,0 +1,13 @@
+name: Daily Cron Job
+
+# set up midnight12:am (UTC time)
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  run-cron-job:
+    runs-on: ubuntu-latest  
+    steps:
+      - name: Run a script
+        run: echo "Scheduled task executed"  
